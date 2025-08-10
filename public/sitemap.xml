@@ -6,7 +6,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://madnessbot.com/</loc>
+    <loc>https://jr4488.github.io/madnessbot-website/</loc>
     <lastmod>2025-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
   <!-- FAQ Page -->
   <url>
-    <loc>https://madnessbot.com/faq</loc>
+    <loc>https://jr4488.github.io/madnessbot-website/faq</loc>
     <lastmod>2025-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -22,7 +22,7 @@
 
   <!-- Contact Page -->
   <url>
-    <loc>https://madnessbot.com/contact</loc>
+    <loc>https://jr4488.github.io/madnessbot-website/contact</loc>
     <lastmod>2025-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -30,7 +30,7 @@
 
   <!-- Privacy Policy -->
   <url>
-    <loc>https://madnessbot.com/privacy</loc>
+    <loc>https://jr4488.github.io/madnessbot-website/privacy</loc>
     <lastmod>2025-08-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -38,7 +38,7 @@
 
   <!-- Terms of Service -->
   <url>
-    <loc>https://madnessbot.com/terms</loc>
+    <loc>https://jr4488.github.io/madnessbot-website/terms</loc>
     <lastmod>2025-08-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

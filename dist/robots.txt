@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://madnessbot.com/sitemap.xml
+Sitemap: https://jr4488.github.io/madnessbot-website/sitemap.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1

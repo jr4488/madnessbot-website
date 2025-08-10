@@ -1,11 +1,13 @@
 import { useEffect } from 'react'
 
+const PAGES_BASE = 'https://jr4488.github.io/madnessbot-website'
+
 const SEOHead = ({ 
   title = "MadnessBot - AI Automotive Assistant for Mechanics | 24/7 Auto Repair Help",
   description = "Get expert automotive advice, diagnose problems, and repair estimates with MadnessBot - your AI master mechanic. Upload photos for instant diagnosis. Free tier available with 5 daily queries.",
   keywords = "AI automotive assistant, auto repair chatbot, mechanic AI tool, vehicle diagnostic AI, automotive troubleshooting, car repair assistant, mobile mechanic app, auto repair estimates",
-  canonical = "https://madnessbot.com/",
-  ogImage = "https://madnessbot.com/og-image.jpg"
+  canonical = `${PAGES_BASE}/`,
+  ogImage = `${PAGES_BASE}/madness_character_modern.png`
 }) => {
   useEffect(() => {
     // Update document title

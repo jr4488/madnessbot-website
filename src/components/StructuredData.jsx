@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 
+const PAGES_BASE = 'https://jr4488.github.io/madnessbot-website'
+
 const StructuredData = ({ type = 'homepage' }) => {
   useEffect(() => {
     // Remove existing structured data
@@ -12,18 +14,24 @@ const StructuredData = ({ type = 'homepage' }) => {
       "@type": "Organization",
       "name": "MadnessBot",
       "description": "AI-powered automotive assistant for mechanics providing 24/7 expert advice, diagnostics, and repair estimates",
-      "url": "https://madnessbot.com",
-      "logo": "https://madnessbot.com/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-628-282-6142",
-        "email": "snaponmadness@gmail.com",
-        "contactType": "customer service",
-        "availableLanguage": "English"
-      },
+      "url": `${PAGES_BASE}/`,
+      "logo": `${PAGES_BASE}/madness_character_modern.png`,
       "sameAs": [
         "https://anansiportia.com"
       ]
+    }
+
+    // WebSite schema with SearchAction (improves sitelinks search box eligibility)
+    const websiteSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": `${PAGES_BASE}/`,
+      "name": "MadnessBot",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": `${PAGES_BASE}/?q={search_term_string}`,
+        "query-input": "required name=search_term_string"
+      }
     }
 
     // Software Application Schema
@@ -33,7 +41,7 @@ const StructuredData = ({ type = 'homepage' }) => {
       "name": "MadnessBot",
       "description": "AI automotive assistant that helps mechanics diagnose problems, provide repair estimates, and manage toolbox inventory",
       "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web, iOS, Android",
+      "operatingSystem": "Web",
       "offers": [
         {
           "@type": "Offer",
@@ -47,19 +55,10 @@ const StructuredData = ({ type = 'homepage' }) => {
           "name": "Pro Plan",
           "price": "6.95",
           "priceCurrency": "USD",
-          "billingDuration": "P1M",
           "description": "Unlimited queries, conversation memory, toolbox inventory management, priority email support, advanced diagnostics"
         }
       ],
-      "featureList": [
-        "AI Mechanic Assistant",
-        "Image Analysis",
-        "AI Image Generation",
-        "Web Search Integration",
-        "Toolbox Inventory Management",
-        "Mobile Responsive Design"
-      ],
-      "screenshot": "https://madnessbot.com/mobile-mockup.png"
+      "screenshot": `${PAGES_BASE}/mobile_chat_mockup_provided.png`
     }
 
     // Service Schema
@@ -70,13 +69,11 @@ const StructuredData = ({ type = 'homepage' }) => {
       "description": "Professional automotive diagnostic and repair assistance powered by artificial intelligence",
       "provider": {
         "@type": "Organization",
-        "name": "MadnessBot"
+        "name": "MadnessBot",
+        "url": `${PAGES_BASE}/`
       },
       "serviceType": "Automotive Diagnostic Service",
-      "audience": {
-        "@type": "Audience",
-        "audienceType": "Automotive Technicians and Mechanics"
-      }
+      "areaServed": "Worldwide"
     }
 
     // FAQ Schema (for FAQ page)
@@ -112,7 +109,7 @@ const StructuredData = ({ type = 'homepage' }) => {
     }
 
     // Add schemas based on page type
-    const schemas = [organizationSchema, softwareSchema, serviceSchema]
+    const schemas = [organizationSchema, websiteSchema, softwareSchema, serviceSchema]
     
     if (type === 'faq') {
       schemas.push(faqSchema)

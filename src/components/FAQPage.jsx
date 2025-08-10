@@ -3,6 +3,8 @@ import { HelpCircle, MessageSquare, Camera, Crown, Shield, Smartphone } from 'lu
 import SEOHead from './SEOHead'
 import StructuredData from './StructuredData'
 
+const PAGES_BASE = 'https://jr4488.github.io/madnessbot-website'
+
 const FAQPage = () => {
   const faqs = [
     {
@@ -61,7 +63,7 @@ const FAQPage = () => {
         title="MadnessBot FAQ - Frequently Asked Questions | AI Automotive Assistant"
         description="Get answers to common questions about MadnessBot, the AI automotive assistant for mechanics. Learn about features, pricing, image analysis, and how to get the best diagnostic advice."
         keywords="MadnessBot FAQ, automotive AI questions, mechanic chatbot help, auto repair assistant FAQ, vehicle diagnostic AI support"
-        canonical="https://madnessbot.com/faq"
+        canonical={`${PAGES_BASE}/faq`}
       />
       <StructuredData type="faq" />
       
@@ -127,37 +129,13 @@ const FAQPage = () => {
               <Smartphone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
               <h3 className="font-semibold text-slate-900 mb-2">Mobile Ready</h3>
               <p className="text-sm text-slate-600">
-                Works perfectly on all devices including tablets and phones
+                Works on all devices with a mobile-first design
               </p>
             </CardContent>
           </Card>
         </div>
-
-        {/* CTA */}
-        <div className="mt-16 text-center">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">
-            Still have questions?
-          </h2>
-          <p className="text-slate-600 mb-6">
-            Can't find the answer you're looking for? Please chat with our friendly team.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-            >
-              Contact Support
-            </a>
-            <a
-              href="/chat"
-              className="inline-flex items-center justify-center px-6 py-3 border border-slate-300 text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50"
-            >
-              Try MadnessBot
-            </a>
-          </div>
-        </div>
       </div>
-    </div>
+      </div>
     </>
   )
 }
