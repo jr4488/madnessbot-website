@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://madnessbot.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Allow all search engines to index the site
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+
+# Allow specific important pages
+Allow: /
+Allow: /faq
+Allow: /contact
+Allow: /privacy
+Allow: /terms
+
